@@ -6,8 +6,10 @@ import javax.swing.JFrame;
 public class Init {
 	public JFrame jFrame;
 	MyJPanel panels[];
-	Color colors[] = { Color.blue, Color.green, Color.red, Color.white, Color.yellow, Color.black, Color.orange,
-			Color.cyan, Color.gray };
+	Color colors[] = { 
+			Color.blue, Color.green, Color.red, 
+			Color.white, Color.yellow, Color.black, 
+			Color.orange, Color.cyan, Color.gray };
 
 	public Init() {
 		panels = new MyJPanel[9];

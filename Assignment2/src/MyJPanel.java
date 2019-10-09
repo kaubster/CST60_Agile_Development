@@ -45,5 +45,6 @@ public class MyJPanel extends JPanel {
 	}
 
 	public void clicked() {
+		
 	}
 }

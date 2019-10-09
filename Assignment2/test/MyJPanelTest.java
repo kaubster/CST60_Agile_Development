@@ -1,16 +1,17 @@
-import static org.junit.Assert.assertSame;
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+//import org.junit.jupiter.api.*;
 
 import java.awt.Color;
-
-import org.junit.Test;
-import org.junit.jupiter.api.BeforeEach;
 
 public class MyJPanelTest {
 	private static final Color COLOR = Color.BLACK;
 	private static final Color MAGENTA = Color.magenta;
 	MyJPanel myJPanel;
-
-	@BeforeEach
+	
+	@Before
 	public void setUp() {
 		myJPanel = new MyJPanel(COLOR);
 	}
