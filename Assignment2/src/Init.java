@@ -1,3 +1,5 @@
+import static org.junit.Assert.assertArrayEquals;
+
 import java.awt.Color;
 import java.awt.GridLayout;
 
