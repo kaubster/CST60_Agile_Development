@@ -40,17 +40,11 @@ public class MyJPanel extends JPanel {
 
 		@Override
 		public void mouseClicked(MouseEvent me) {
-			
 			clicked();
 		}
 	}
 
 	public void clicked() {
-		
-		// Whenever the mouse enters a panel, it turns magenta; 
-		// when the mouse leaves, the color reverts back to its original color. 
-		// Add the following user story: "When the user clicks on the center panel, the colors of the eight surrounding panels rotate to the next panel in a clockwise direction." Remember to TDD. The test cases you write matter more than the code. 
-		
-		
+		// Do nothing...
 	}
 }

@@ -1,10 +1,6 @@
 import static org.junit.Assert.*;
-
-import java.awt.Color;
-
 import org.junit.Before;
 import org.junit.Test;
-//import org.junit.jupiter.api.*;
 
 public class InitTest {
 	Init init;
@@ -39,7 +35,7 @@ public class InitTest {
 	}
 	
 	@Test
-	public void center_expect_clockwise_rotating_colors() {		
+	public void center_clockwise_rotating_colors_by_1() {		
 		init.panels[4].clicked();
 		assertSame(init.colors[3], init.panels[0].getBackground());
 		assertSame(init.colors[0], init.panels[1].getBackground());

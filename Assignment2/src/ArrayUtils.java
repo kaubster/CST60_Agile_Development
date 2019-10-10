@@ -1,13 +1,21 @@
-
 public class ArrayUtils {
 	
 	// Modified original code from following website:
 	// Source: https://www.java67.com/2018/05/how-to-rotate-array-left-and-right-by-given-number.html
 	public static Object[] rotateArrayRight(Object[] input, int numOfRotations) {
 		
-		if(numOfRotations <= 0 || input == null || input.length == 0)
-			return input;
+		if(input == null)
+			throw new NullPointerException("rotateArrayRight argument 'input' requires an initialized array.");
 		
+		if(numOfRotations <= 0)
+			throw new java.lang.IllegalArgumentException("rotateArrayRight argument 'numOfRotations' should be greater than zero.");
+		
+		if(input.length == 0)
+			throw new java.lang.ArrayIndexOutOfBoundsException("rotateArrayRight argument 'input' should not be empty.");
+
+		if(input.length <= numOfRotations)
+			throw new java.lang.ArrayIndexOutOfBoundsException("rotateArrayRight argument 'numOfRotations' must be less than 'input' array length.");
+				
 		int length = input.length;
 		
 		Object[] working = input.clone();
