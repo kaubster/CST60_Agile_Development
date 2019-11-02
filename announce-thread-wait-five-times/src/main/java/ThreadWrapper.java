@@ -1,8 +1,8 @@
 
 public class ThreadWrapper {
-	
-	public void sleep(long millis) throws InterruptedException {
-		Thread.sleep(1000);
+
+	public void sleep(long millis) throws InterruptedException, IllegalArgumentException {
+		Thread.sleep(millis);
 	}
 	
 }
