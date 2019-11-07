@@ -9,10 +9,10 @@ public class KataPotterShoppingCart {
 
 	}
 
-	public double checkout(ArrayList<Integer> cartItems) {	
+	public float checkout(ArrayList<Integer> cartItems) {	
 		
 		Map<String, Integer> bookToCountMap = new Hashtable<String, Integer>();
-		
+				
 		for (int i = 0; i < cartItems.size(); i++) {			
 			String bookNumber = cartItems.get(i).toString();
 			if(!bookToCountMap.containsKey(bookNumber)) {
@@ -21,27 +21,36 @@ public class KataPotterShoppingCart {
 				int count = bookToCountMap.get(bookNumber);
 				count++;
 				bookToCountMap.put(bookNumber, count);
-			}
+			}			
 		}
 		
-		int total = 0;
+		float total = 0;
 		
 		while (bookToCountMap.size() > 0) {
 
 			int unique = bookToCountMap.size();
-			float dicount = getDiscount(unique);
+			float discount = getDiscount(unique);
 				
-			total +=  8 * unique * dicount;
+			total +=  8 * unique * discount;
+			
+			System.out.println(8 + "*" + unique + "*" +  discount);
+			
+			ArrayList<String> delete = new ArrayList<String>();
 			
 			for (String key : bookToCountMap.keySet()) {
 				int count = bookToCountMap.get(key);
 				count--;
 				
 				if(count == 0)
-					bookToCountMap.remove(key);
+					delete.add(key);
 				else
 					bookToCountMap.put(key, count);
 			}
+			
+			for (int i = 0; i < delete.size(); i++) {
+				bookToCountMap.remove(delete.get(i));
+			}
+			
 		}
 		
 		return total;

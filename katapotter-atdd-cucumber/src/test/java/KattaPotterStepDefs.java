@@ -10,7 +10,7 @@ import cucumber.api.java.en.When;
 public class KattaPotterStepDefs {
 	
 	ArrayList<Integer> cartItems = new ArrayList<Integer>();
-	double price;
+	float price;
 	
 	@Given("^the user chose book (\\d+)$")
 	public void the_user_chose_book(int bookNumber) throws Throwable {
@@ -23,9 +23,9 @@ public class KattaPotterStepDefs {
 		price = cart.checkout(cartItems);
 	}
 
-	@Then("^the system should charge (\\d+) EUR$")
-	public void the_system_should_charge_EUR(int expectedPrice) throws Throwable {
-		assertEquals(price, expectedPrice, 0);
+	@Then("^the system should charge (-?\\d*(?:[.,]\\d+)?) EUR$")
+	public void the_system_should_charge_EUR(float expectedPrice) throws Throwable {
+		assertEquals(price, expectedPrice, 0.0f);
 	}
 	
 	@Given("^the user chose (\\d+) of book (\\d+)$")
@@ -34,4 +34,5 @@ public class KattaPotterStepDefs {
 			cartItems.add(bookNumber);
 		}	
 	}
+
 }
