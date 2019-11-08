@@ -1,4 +1,4 @@
-Feature: Buy a Multiple Identical Books
+Feature: Buy a Multiple Identical Books test simple discounts
 
   Scenario Outline: Buy many of single book
     Given the user chose <count> of book <book>

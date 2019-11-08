@@ -1,4 +1,6 @@
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -43,8 +45,6 @@ public class KataPotterShoppingCart {
 			}			
 		}
 		
-		//int distinct = bookToCountMap.values().stream().reduce(0, (i,j) -> i + j);
-		
 		return bookToCountMap;		
 	}
 	
@@ -58,7 +58,7 @@ public class KataPotterShoppingCart {
 			int unique = bookToCountMap.size();
 			float discount = getDiscount(unique);
 				
-			total +=  8 * unique * discount;
+			total +=  8f * (float)unique * discount;
 			
 			System.out.println(8 + "*" + unique + "*" +  discount);
 			
@@ -79,7 +79,9 @@ public class KataPotterShoppingCart {
 			}
 			
 		}
-		return total;
+		
+		BigDecimal d = new BigDecimal(total).setScale(1, RoundingMode.HALF_UP);
+		return d.floatValue();
 	}
 
 	public float getDiscount(int uniqueBooks) {
@@ -111,11 +113,14 @@ public class KataPotterShoppingCart {
 
 		for (Set set : actual) {
 			int count = set.size();			
-			float discount = getDiscount(count);			
+			float discount = getDiscount(count);		
 			total +=  8 * count * discount;
+
+			System.out.println(8 + "*" + count + "*" +  discount);
 		}
 		
-		return total;
+		BigDecimal d = new BigDecimal(total).setScale(1, RoundingMode.HALF_UP);
+		return d.floatValue();
 	}
 
 	public static java.util.List<Set> spreadGroups(ArrayList<Integer> cartItems) {

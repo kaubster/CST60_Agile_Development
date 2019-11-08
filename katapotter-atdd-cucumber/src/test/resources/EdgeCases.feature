@@ -1,4 +1,4 @@
-Feature: Buy a Different Books
+Feature: Determine better price group edge cases
 
   Scenario Outline: Buy several where smaller set is cheaper
     Given the user chose <b1_count> of book 1
@@ -12,4 +12,4 @@ Feature: Buy a Different Books
     Examples: 
       | b1_count | b2_count | b3_count | b4_count | b5_count | float |
       |        2 |        2 |        2 |        1 |        1 |  51.2 |
-      #|        5 |        5 |        4 |        5 |        4 | 141.2 |
+      |        5 |        5 |        4 |        5 |        4 | 141.2 |
