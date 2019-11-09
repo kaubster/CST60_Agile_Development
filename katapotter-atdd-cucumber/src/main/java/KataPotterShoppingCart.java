@@ -13,12 +13,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 public class KataPotterShoppingCart {
-
-	
-	public KataPotterShoppingCart() {
-
-	}
-	
+		
 	public float checkout(ArrayList<Integer> cartItems) {	
 				
 		float countPrice = calcPrice(cartItems);
@@ -76,8 +71,7 @@ public class KataPotterShoppingCart {
 			
 			for (int i = 0; i < delete.size(); i++) {
 				bookToCountMap.remove(delete.get(i));
-			}
-			
+			}			
 		}
 		
 		BigDecimal d = new BigDecimal(total).setScale(1, RoundingMode.HALF_UP);
@@ -146,8 +140,6 @@ public class KataPotterShoppingCart {
 	}
 
 	public static Set<Integer> findSmallestNotContaining(List<Set> groups, Integer integer) {
-		List<Set> smallerGroups = new ArrayList<Set>();
-		
 		int smallest = -1;
 		
 		Set<Integer> fSet = null;		

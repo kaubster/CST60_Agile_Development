@@ -1,4 +1,4 @@
-Feature: Buy a different books test simple discounts
+Feature: Buy different books testing simple discounts
 
   Scenario Outline: Buy 1 of seperate books
     Given the user chose <b1_count> of book 1

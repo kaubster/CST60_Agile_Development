@@ -1,4 +1,4 @@
-Feature: Determine better price group edge cases
+Feature: Determine better price group testing edge cases
 
   Scenario Outline: Buy several where smaller set is cheaper
     Given the user chose <b1_count> of book 1

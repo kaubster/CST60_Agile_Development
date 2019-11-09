@@ -143,10 +143,8 @@ class KataPotterShoppingCartTest {
 		for (int i = 0; i < 4; i++) {
 			cartItems.add(4);
 		}
-		
-		KataPotterShoppingCart cart = new KataPotterShoppingCart();
-		
-		List<Set> actual = cart.spreadGroups(cartItems);
+				
+		List<Set> actual = KataPotterShoppingCart.spreadGroups(cartItems);
 
 		List<Set> expected = new ArrayList<Set>();
 		
@@ -200,9 +198,6 @@ class KataPotterShoppingCartTest {
 	
 	@Test() 
 	public void find_smallest_group_not_containing() {
-		
-		KataPotterShoppingCart cart = new KataPotterShoppingCart();
-		
 		List<Set> groups = new ArrayList<Set>();
 		
 		Set<Integer> group1 = new HashSet<Integer>();
@@ -231,9 +226,7 @@ class KataPotterShoppingCartTest {
 	
 	@Test() 
 	public void add_int_to_smallest_group_not_containing() {
-		
-		KataPotterShoppingCart cart = new KataPotterShoppingCart();
-		
+
 		List<Set> groups = new ArrayList<Set>();
 		
 		Set<Integer> group1 = new HashSet<Integer>();

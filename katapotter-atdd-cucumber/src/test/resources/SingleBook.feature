@@ -1,4 +1,4 @@
-Feature: Buy a Single Book test basics
+Feature: Buying a single book testing basics
 
   Scenario Outline: Buy book 1
     Given the user chose book <book>
