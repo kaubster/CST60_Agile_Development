@@ -67,7 +67,7 @@ class KataPotterShoppingCartTest {
 	}
 	
 	@Test() 
-	public void try_outlier_1() {
+	public void ensure_edge_case_2_4s_groups_better_than_1_5_and_3() {
 
 		//counts not cutting it, try spread groups...
 		
@@ -112,7 +112,7 @@ class KataPotterShoppingCartTest {
 	}
 	
 	@Test() 
-	public void try_outlier_2() {		
+	public void ensure_edge_case_3_5s_2_4s_groups_better_than_4_5s_and_3() {		
 		
 //		  assert_equal(3 * (8 * 5 * 0.75) + 2 * (8 * 4 * 0.8), 
 //				    price([0, 0, 0, 0, 0, 
