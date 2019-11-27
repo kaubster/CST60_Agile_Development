@@ -4,14 +4,7 @@
   <artifactId>katapotter-atdd-cucumber</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-	<dependencies>
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-all</artifactId>
-			<version>1.10.19</version>
-			<scope>test</scope>
-		</dependency>
-		
+	<dependencies>		
 		<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
@@ -24,7 +17,5 @@
 			<version>1.2.4</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-
 </project>
